@@ -17,7 +17,7 @@ def split_file():
     for file in GENERATED_FILES:
 
 
-        with open('Inputfile/generatedimages/' + file, 'rb') as bigfile:
+        with open('Inputfile/generatedimages/' + file, 'rb+') as bigfile:
             bigfile.seek(0)
             while True:
                 binChunk = bigfile.read(BIN_CHUNK_SIZE)
